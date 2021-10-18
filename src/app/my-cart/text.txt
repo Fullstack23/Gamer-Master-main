@@ -1,0 +1,2 @@
+<div class="colors" [class.active-variacao]="activeVariacao === 'periferico'"></div>
+(ionChange)="segmentChanged($event)"

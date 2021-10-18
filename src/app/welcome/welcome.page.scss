@@ -1,0 +1,27 @@
+ion-img{
+  height: 70vh;
+  width: 200px;
+  margin: auto;
+  display: block;    
+}
+
+.img_header{
+  width: 35px;
+  filter: invert(1);   
+}
+
+.img_footer{
+  
+  height: 15vh;
+  margin: auto;
+  display: block;
+ 
+  img{
+      background-color: #ce693e ;
+      border-radius: 50%;       
+      height: 50px;
+      padding: 6px;        
+      box-shadow: 0 0  5px #fff;
+  }
+ 
+}

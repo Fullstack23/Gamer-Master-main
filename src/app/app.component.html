@@ -1,0 +1,64 @@
+<ion-app>
+  <ion-menu contentId='menu'>
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Menu da Loja</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-item >
+      <ion-icon color="tertiary" name="man-outline"></ion-icon>
+      <ion-button href='/welcome' color="tertiary">
+        Bem-vindo(a)
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" name='home'></ion-icon>
+      <ion-button class="center" href='/home' color="tertiary">Home
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" name="log-in-outline"></ion-icon>
+      <ion-button class="center" href='/login' color="tertiary">
+        Login
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" name="arrow-redo-outline"></ion-icon>
+      <ion-button class="center" href='/cadastrar' color="tertiary">
+        Cadastrar
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" name="cart-outline"></ion-icon>
+      <ion-button class="center" href='/my-cart' color="tertiary">
+      Carrinho
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" name="person-circle-outline"></ion-icon>
+      <ion-button class="padin-center" href='/profile' color="tertiary">Perfil
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" name="star-outline"></ion-icon>
+      <ion-button class="padin-center" href='/favorite' color="tertiary">Favorito
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="tertiary" name="checkmark-circle-outline"></ion-icon>
+      <ion-button class="center" href='/checkout' color="tertiary">
+        Checar
+      </ion-button>
+    </ion-item>
+  </ion-menu>
+  <ion-router-outlet id='menu'>
+  </ion-router-outlet>
+</ion-app>

@@ -1,0 +1,260 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons>
+        <ion-menu-button>
+        </ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <h1 class="title">Checar</h1>
+
+  <div class="cart-items">
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../assets/cart/cart1.png" />
+        </div>
+        <div class="item-info">
+          <p>SSD</p>
+          <p>Lotto.LTD</p>
+          <p>R$599,90</p>
+          <div class="qty-selector">
+            <ion-button fill="clear" (click)="sub(produto.id)">-</ion-button>
+            <ion-label>1</ion-label>
+            <ion-button fill="clear">+</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../assets/cart/cart2.png" />
+        </div>
+        <div class="item-info">
+          <p>Computador</p>
+          <p></p>
+          <p color="tertiary">R$4779.00</p>
+          <div class="qty-selector">
+            <ion-button fill="clear" (click)="sub(produto.id)">-</ion-button>
+            <ion-label>1</ion-label>
+            <ion-button fill="clear">+</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../assets/cart/cart3.png" />
+        </div>
+        <div class="item-info">
+          <p>Processador</p>
+          <p>Lotto.LTD</p>
+          <p>R$1.399,88</p>
+          <div class="qty-selector">
+            <ion-button fill="clear" (click)="sub(produto.id)">-</ion-button>
+            <ion-label>1</ion-label>
+            <ion-button fill="clear">+</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="../../assets/cart/cart4.png" />
+        </div>
+        <div class="item-info">
+          <p>Computador</p>
+          <p></p>
+          <p color="tertiary">R$79,90</p>
+          <div class="qty-selector">
+            <ion-button fill="clear" (click)="sub(produto.id)">-</ion-button>
+            <ion-label>1</ion-label>
+            <ion-button fill="clear">+</ion-button>
+          </div>
+
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!--<div class="address">
+    <ion-item lines="none">
+      37/6 A, Moratuwa, Sri Lanka
+      <ion-badge slot="end">&nbsp;</ion-badge>
+    </ion-item>
+  </div>-->
+
+  <hr>
+  <ion-grid>
+
+    <ion-row routerLink="/payment">
+      <ion-col size="9">
+        <ion-item lines="none">
+          <ion-label color="primary">Método de Pagamento</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4" offset="-1">
+        <ion-item lines="none">
+          <ion-button slot="end" fill="clear" routerLink="/footer-store/payment">Alterar</ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row >
+      <ion-col size="3">
+        <ion-item lines="none">
+          <ion-icon name="card-outline"></ion-icon>
+        </ion-item>
+      </ion-col>
+      <ion-col size="9">
+        <ion-item lines="none">
+          <p>**** **** **** 4747</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row routerLink="/profile">
+      <ion-col size="9">
+        <ion-item lines="none">
+          <ion-label color="primary">Endereço</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4" offset="-1">
+        <ion-item lines="none">
+          <ion-button slot="end" fill="clear">Alterar</ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-item lines="none">
+          <ion-icon color="primary" name="home-outline"></ion-icon>
+        </ion-item>
+      </ion-col>
+      <ion-col size="9">
+        <p> Fernando Silva </p>
+        <p> Estrada do Engenho, 0000 </p>
+        <p> Bangu </p>
+        <p> Rio de Janeiro - RJ </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row routerLink="/delivery">
+      <ion-col size="9">
+        <ion-item lines="none">
+          <ion-label color="primary">Modo de Entrega</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4" offset="-1">
+        <ion-item lines="none">
+          <ion-button slot="end" fill="clear">Alterar</ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-item lines="none">
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <ellipse cx="12.3529" cy="12" rx="12.3529" ry="12" fill="url(#pattern0)" />
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0" transform="translate(0 -0.0147059) scale(0.015625 0.0160846)" />
+              </pattern>
+              <image id="image0" width="64" height="64"
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAEAYAAAD6+a2dAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABgAAAAYADwa0LPAAAAB3RJTUUH5QYPEw45gph9yAAADUdJREFUeNrtnXtc1GW6wL/PMHgjkDRvmJfUtjRNvK2ZpWBaanlclBnRltL8aIqt1h4vnTSU3FKJ8rItbV6yTqQwA3b2BKW5XnLz0gJiuGrpamnhLU/ejkJyefePd0bZFYYfMMMIO99/cGbe6/N7f7/f8z7v8zxCHcY6+Ve/AnnUuurLL0EiLDt37AAYEztypLfHdqsg3h6AJ7BEDhkCYhb/Tz8Fiin28yv1s5kni4pAFcrM3r0BUo589ZW3x+wtTN4egDuxRDZrBnKnzHv/fW6+8E6K+NBsBigJfeQRb4/Z29SRBSAC8rxcXbMGyOO1Vq2M1Tt40Nsj9zZ1YgFYL06dCiznthEjDBSfoGZ99hmA3b5pk7fH7m1qtQ4wOuq++0Aa+dXPzATyyW/Y0EXxFrT48UdQpwtju3cH+KjZqVOu2rdE1qunpdStm/7m9GkAuz0vz9tzdxe18gkwrFP9+iD9/XI+/JCKL7wwRilQp/GbOBEMXHhL69Yg3SU0NxdERLKyQMxiPn4cwBI5a5a3ZeAuauECkN1BBUuWALvoru/kCshQD779NoBt2ccfG2g/3ZQ+dy6QS+4995T6waFUiln8Fy0CsFhatvS2NKpLrVoAFsvQoUB/tXz6dAPFe6vJBw6AGsb0mTMr0U2S6nHvvS5+v767kPG/+IW3ZVJdasUCcGzvWkvrtWsBRYq40l3q8/TPP4PKNE198kkAuz0/vxLdKfWGGNKNZLipVsjPFSYAS2TjxiDpYxomJoI8ZF2ek3PjM4wbd/vt3hmeCEiMXHrvPeAkJ408clWBem/OHPj3NvAYxQSyUPxWrgRGqBFTpwI72RkaeuOz9CucuH07QMTM5s1rcnDWvOeeA94mePhwA8WfVXM+/RTAbl+xokalWIsxAa/z7LBhLsrskXfuvx+kl/8d27aB55UfS2S3biANaR8fb6B4S2afPQvqj+aHJ0zQXylVQ/Kr9ZiA3sr0zTcGyu5lb5cuIN2lu34i6O2S+3haNWgA8kvZt24dUEBEgwYuiju3d6f4H33h1189c8ZLcqy1mEBt5Q9TpgBBpF+6ZKCOY3sknWXX558DWCLbtq3+UGRLQdPXXwcy6dm1q4EKW9XDb70FYPvdJ594T4S1GxOA3Z6dDeqienzQIKApTX/6yUDdr+nfsSNIR+n0l78AjNnZsWNVBuHY3g1Rq6ZNM1Dcub0LY5pW9nxUnX/axjgWwjnTs4MHA83YeO6cgTaOcaxtW5C7VITWEUbXu/tuI51rpdLw9q4BHxUUgMo0/8e4cXq8ldre+SiDMvexyaE5OaDOqscGDgRCCNE28Ar4jrA2bUBC/AL0E0Hb6stCBOQ5/xHvvovx7V0+d2qDzvqrubneFlxdwZDBw3HoEuK3acsW4BRDWrQwUK0Vm8+cAXVSCvQ2LiV/714Aa8a8eSDC+wsXGmhnGtMyMkC9ZRvoPO3zpJYvYyy7t20DbLI0LMxFwTDCsrOBNiSfP1+NDjuqt8+fBzWfBX/7G0CJX1oaQFrygQOem6djtpUpPLrnvfeCtPU7vmUL8D2PhIQYqOaHX3Ex0JI5Z89i/Lze8eRReYVmx+ldwtmznhZIJRaApzBhLykB3qdg7VpQv1a//s1vwDOvvEqZMtP2fv01qBPFl8PCgPZs//57A9WctnOjF965vcuj5fjxUFMX/pahBIvJBEQTPXEiSJTkZWRAqeNpN1IlW3batSNHQH2rBg4cCHRix3ffuXFMuWrwm28C2F70OWwAKdwZHg7y/6x/+WV3N16twwy7/dtvQR1RDw0cCPSn/7591WjuE7U8MRFU1y5Bs2e7e6J1gBay9be/BefhmHswA1gsTZqAJElSfDywgvv69gWeV1v27AE1jpl6v223l20fsKeeOAHqC4s8+CCAzI2JAelO+qRJ3Hyu7k9aYSFgVbt27ACVREJCAjDM3mrjRm9L2ThK8ZLjmHlXNQ+dFnTrBuLPqvh4Sjmt/gtXWdOoEYDsHjtWf1X9Mw8BecmyPy0NWCQLR40qo0wssampoOJsXS2WqnSiTxsBadIE4PbgH34AWLmqsLC6E3A/RpVApSQlPBwgRbRpvJr9ZlsXv/km0Ju9L7zgouBEzm3aBGq1bevQodXt1Qwsl5MuG0ogz9BpXLnYUy9e1P9y/vVxM6qXykpOBhExuVwAdvb06wcwX2l/hDgpKalqryZKPVrKoaLffbiJLvasLCCYYJc3yiWeCAoCOGg1ZnF1Ra33aKlLOO7kR9WEnBwj5eVKz57V7dO3AG49XqZLdnbFxeQQQ3wLoA6iupoGG3oCLKS9bwHUSYqKjTwB2EhT5wIw5sRaFr4FcAvSNfvwYSCQKZcvuyh2nreCgwFG5d51V1X7Mle1ohGi7nr4YYCSC337AlBYZrTurcZXtDLi4SSpmMaOBRVpvc0xPzdxKBCAYOpfvgxc5pHAQBfjKDDvHz8eVIORSpvQ/yQXLhjtS0DEajVyvKqUzWbsUWOxzJihQ6qWLXOnYHy4xGlh/aP6e1ISqGeYtWABOC21ZeOBV4DcKXN9rlpeoJDR/v7ARJkzYQJIY/lk/34AS2RkZHmVfDpA3cVhMBKTjLXZACwWHRxbGg8sAPUDjy9e7O3Z+7iOw9dS6skGHSQbta9HD+ePHlECbXkrVoBSlhLtAiYfhYeDHOf3AQHelkYdYr/8Z1AQEK2ix40DLnDBcehWNo5XhISX7Fq1CtQ26NPHI0qgj5rFEdv5DHNsNmCtvP7ooxXXUkpmPPaYTweoA+jTVvUuS0aMAHqQeehQxbUkRdkjI30LoA5hT712DdRe1Ss21kDxJfzpoYd8C6AO4l9vyxYDxY5ypnVr3wKog6xbZyhO4RJPBAWZueGH7nRHLhd3eKCAMwoY8vf06gXAQofptcm1awCq4PBhgC52HRhR3f68zY1wej1fuaIdOlSADsY1Z2RlgXeim01AczINxQDyzbtVywswUgUH3/B5k8b5AWfOgAhLv/gCRLht3ToQ4VpqqnaJys0FuftQq6NHAawXY2K0IGvFWQLWi336gDxlHbB5M4hJok6e1Kbx9PTS83V8NhV/cOoUyHhrhs5fGLVGp7CtCQQk3JqYlQVsZ7vjjiwTpeTjSZMAUvJXrzbSuCPRQ0fplJ7O9SDSKhPN6T//GdR/q+batHnD1/DWwHrk+edBzMQmJFB+qtqKcERSqSJ2aDdwbVepLMa29yYgSZI2bzbQYCeVO28eVJwzKGpNSIjO2btpE9W/8E4+oOXgwSBPydnUVLjxSvI2Fsv48SDC3KVLqfqFd+JMRyf0X74cwPrg0097auwmUK0l0WbjekhWuRxlbrt2IIOL9uuInbITQ0hc8QPLllGpnL2VwrEQ4NClKVM8JRgj6He7BMlUT+Ykksbs0+17IjVPKcuevGjN3rABWMKSiAgDdRsx8epVYAmhaWmgnqPjgQMgflx57TUqVioD+N8rV4BnlPbDPyVHAgOBNPwGDKDifAEd6HDiBKij6uirr7pbMAZEt5hXwsOB/5L5UVEGKtxD/LFjwCh1ed8+YIMEhoYC3zC7QwcD9RepuORkUC8Sq/MwVDA+EXnnnQpLlf4wRrVvD9JcNc7MBH5k6B13eEBy13P2SpT2b0/pr5U9JxZLRIRWntLSqHgh3Oq8yqspKaBeCo6PjoYbATE62FPiiEtKAhZIXNUCb6pDmYIdo8LCQALUZxkZuD0uQCmVEhcHYBftsFDO0EZb+37+ObCBdgMG1LRg3Dpfpe9wHUt5M6NyO3QAEfPv/vlGqAnKfETrUCd1Ra0eMABox3wdyuUu5CuXvm5OWhFvqNwtj3mw63nU320oOZe7acbGc+dcatGOnEHfqfmdOwP5jFy4EONJpMpB+qn/e+opcGb9vhlHjqG1FOjYu9pO8d16+1zu7zMmT/bCsA6ydOXKKr1bJ0/y9we4OF5fIGUKDQVZTZfOnYFJTNKJHSrgAfVsbi6o3RL5wQcgRRIWGAiEqC0xMVSsgzjT2q2R/ORkLwgwsWRbz57ANkl0abhx7q7eUN3WrQP1ggR8+SXIGxQ/8AAwi8yxY6lY1wlXMVlZQIwpXPtZVJKAkpNFRTp59s6dAHb7+vUeUK5kkGV7ZqYBwVSXg/RLSADV2faCd/L3j210//0gfsX5OTkYMKVXEYepXhWr0aGhAPZU7evnnsbdjtoqPWJigHrU07Z9N+PISKI6+x8zlGTKYziylf2VRdpg4yGypZP2rnbnhXfiEUuarXFmJqifyY+O5nr69mrTlrZ5eaCOSIQOV//w915Rnv4F1evMnNmzuZ5HwW28gthsoEJPH/acl3WN7K8dhyODVE5iIsZfDc5TyoUctttBvVQYrOPmK/ovX7yF0zR96O/Tp4M0pUdsLPATww2l23co1+qcOvfKK1A667nn0uJ5xcASNUNH0pSMHDQIJF0eb9MGuK3keFERqDBi9HEworNjlbd/vtV5IkvbTxouHj4c5Bjv9ekD7DUFBgcDfdQfzp8H1U5t1cfB+S/qnMfpva9e9fbYffjw4cOHDx8+fNRh/gHSSurrJaDKrgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wNi0xNVQxOToxNDo1NyswMDowMCQvu7oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDYtMTVUMTk6MTQ6NTcrMDA6MDBVcgMGAAAAAElFTkSuQmCC" />
+            </defs>
+          </svg>
+        </ion-item>
+      </ion-col>
+      <ion-col size="7" offset="-0.6">
+        <ion-item lines="none">
+          <p>Sedex - Correios</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-item lines="none">
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <ellipse cx="12.3529" cy="12" rx="12.3529" ry="12" fill="url(#pattern0)" />
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0" transform="translate(0 -0.0147059) scale(0.015625 0.0160846)" />
+              </pattern>
+              <image id="image0" width="64" height="64"
+                xlink:href="data:image/png;base64,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" />
+            </defs>
+          </svg>
+        </ion-item>
+      </ion-col>
+      <ion-col size="7" offset="-0.6">
+        <ion-item lines="none">
+          <p>PAC - Correios</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-item lines="none">
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <ellipse cx="12.3529" cy="12" rx="12.3529" ry="12" fill="url(#pattern0)" />
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0" transform="translate(0 -0.0147059) scale(0.015625 0.0160846)" />
+              </pattern>
+              <image id="image0" width="64" height="64"
+                xlink:href="data:image/png;base64,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" />
+            </defs>
+          </svg>
+        </ion-item>
+      </ion-col>
+      <ion-col size="7" offset="-0.6">
+        <ion-item lines="none">
+          <ion-label>Transportadora</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <hr>
+  <div class="cart-total">
+    <ion-item lines="none">
+      <ion-label>Sub Totais</ion-label>
+      <ion-label slot="end" class="ion-text-right">R$6.858,68</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Desconto</ion-label>
+      <ion-label slot="end" class="ion-text-right">R$5%</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Envio</ion-label>
+      <ion-label slot="end" class="ion-text-right">R$30,00</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Total</ion-label>
+      <ion-label slot="end" class="ion-text-right">R$6.544,246</ion-label>
+    </ion-item>
+  </div>
+</ion-content>
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button expand="block" class="main-button" routerLink="/confirm" routerDirection="forward">Confirmar
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

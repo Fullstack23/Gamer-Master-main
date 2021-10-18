@@ -1,0 +1,17 @@
+CREATE DATABASE banco5;
+USE banco5;
+
+CREATE TABLE usuario(
+  id int primary key auto_increment,
+  nome varchar(50),
+  email varchar(50),
+  senha varchar(125)
+);
+
+INSERT INTO usuario ( nome, email, senha) VALUES ('Will', 'will@gmail.com', '123');
+
+INSERT INTO usuario (nome, email, senha) VALUES ('Rubens', 'rubens@gmail.com', 'abc');
+
+INSERT INTO usuario (nome, email, senha) VALUES ('Paulo', 'paulo@gmail.com', 'def');
+
+SELECT * FROM usuario;

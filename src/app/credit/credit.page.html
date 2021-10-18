@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center" fullscreen="true">
+  <h1 class="title">Cartão de Crédito
+  </h1>
+  <img src="../../assets/card/card-1.png" />
+
+  <hr>
+  <form>
+    <ion-row>
+      <ion-col>
+        <ion-label class="label">Nome do Cartão: </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-input type="text" placeholder="" required></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label class="label">Número do Cartão: </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-input type="text" placeholder="" required></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-text-start">
+      <ion-col>
+        <ion-label class="label" class="end" >Data de Vencimento: </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-input type="text" placeholder="" required></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-text-start">
+      <ion-col>
+        <ion-label class="label" class="end">Código de Segurança: </ion-label>
+      </ion-col>
+      <ion-col size="8">
+        <ion-input type="text" placeholder="" required></ion-input>
+      </ion-col>
+    </ion-row>
+
+  </form>
+  <hr>
+
+  <ion-row>
+    <ion-col style="text-align: center;">
+      <ion-button routerLink="/confirmcard" color="success" expand="block" class="button_cadastrar">USar esse Cartão</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

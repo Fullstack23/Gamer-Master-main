@@ -1,0 +1,159 @@
+<ion-header >
+  <ion-toolbar color="tertiary">
+      <ion-buttons>
+          <ion-menu-button>
+          </ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!--<ion-header>
+<ion-toolbar>
+<ion-buttons slot="start">
+  <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+    <img src="../../assets/back-dark.svg" />
+  </ion-button>
+</ion-buttons>
+
+<ion-buttons slot="end">
+  <ion-button>
+    <ion-icon name="search-outline" color="dark"></ion-icon>
+  </ion-button>
+  <ion-button class="notification">
+    <ion-icon name="notifications-outline" color="dark"></ion-icon>
+    <span>&nbsp;</span>
+  </ion-button>
+</ion-buttons>
+</ion-toolbar>
+</ion-header>-->
+
+<ion-content color="tertiary">
+<ion-slides  color="tertiary" pager="true" class="product-slider">
+<ion-slide>
+  <img src="../../assets/produto-slider/prod-1.png" />
+</ion-slide>
+<ion-slide>
+  <img src="../../assets/produto-slider/prod-2.png" />
+</ion-slide>
+<ion-slide>
+  <img src="../../assets/produto-slider/prod-3.png" />
+</ion-slide>
+</ion-slides>
+
+<div class="seperator">
+<hr>
+</div>
+<div class="ion-padding-vertical" >
+<h1 color="light" class="item-name">SSD Viper</h1>
+
+<h4 class="price">
+  R$599.90
+</h4>
+</div>
+
+<div class="seperator">
+<hr>
+</div>
+
+<div color="light" class="review">
+<ion-row>
+  <ion-col size="6">
+    <div class="rating">
+      4.5
+    </div>
+    Muito bom
+  </ion-col>
+  <ion-col size="6">
+    <div color="light" class="count">59 Reviews</div>
+  </ion-col>
+</ion-row>
+</div>
+
+<div class="seperator">
+<hr>
+</div>
+
+<div class="descricao">
+<h5>Descrição</h5>
+<p class="center">
+  PATRIOT Viper Gaming VPR100 RGB M.2 2280 PCIe Solid State Drive - 512GB Descrição: Transforme sua velocidade da luz!
+  Patriot Viper Gaming está encantado para apresentar a primeira sincronização de APP RGB do mundo, de alto desempenho SSD M.2 PCIe Gen3x4, VPR100.
+  Projetado com um afiado protetor de calor externo e o controlador E12 sólido de Phison fornece o VPR100, a tecnologia de ponta para alcançar a velocidade da luz.
+  5x mais rápido do que os SSDs SATA, o VPR100 é o próximo SSD da edição RGB para jogadores, entusiastas de tecnologia, criadores de conteúdo, modeladores 3D,
+</p>
+</div>
+
+<div class="seperator">
+<hr>
+</div>
+
+<div class="variation">
+<ion-segment (ionChange)="segmentChanged($event)" value="hardware">
+  <ion-segment-button value="hardware">
+    <ion-label>Selecione o Hardware</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="periferico">
+    <ion-label>Selecione o Periférico</ion-label>
+  </ion-segment-button>
+</ion-segment>
+</div>
+
+
+<div class="seperator">
+<hr>
+</div>
+
+<div class="variation-selector">
+<div class="sizes" [class.active-variation]="activeVariacao === 'hardware'">
+  <div [class.active]='selectedhardware === 1' (click)="changeHardware(1)">
+    128
+  </div>
+  <div [class.active]='selectedhardware === 2' (click)="changeHardware(2)">
+    256
+  </div>
+  <div [class.active]='selectedhardware === 3' (click)="changeHardware(3)">
+    500
+  </div>
+  <div [class.active]='selectedhardware === 4' (click)="changeHardware(4)">
+    1000
+  </div>
+</div>
+
+<!--<div class="colors" [class.active-variation]="activeVariacao === 'periferico'">
+  <div [class.active]='selectedperiferico === 1' (click)="changePeriferico(1)">
+    RYZEN 3
+  </div>
+  <div [class.active]='selectedperiferico === 2' (click)="changePeriferico(2)">
+    RYZEN 5
+  </div>
+  <div [class.active]='selectedperiferico === 3' (click)="changePeriferico(3)">
+    RYZEN 7
+  </div>
+</div>-->
+</div>
+
+<div class="colors" [class.active-variacao]="activeVariacao === 'periferico'"></div>
+
+</ion-content>
+
+<ion-footer>
+<ion-row>
+<ion-col size="">
+</ion-col>
+<ion-toolbar >
+  <ion-button expand="block" class="main-button" routerLink="/my-cart" routerDirection="forward">Adicionar ao carirrinho</ion-button>
+</ion-toolbar>
+</ion-row>
+</ion-footer>
+
+<ion-footer class="ion-no-border">
+<ion-toolbar>
+<ion-row>
+  <ion-col routerLink="/favorite">
+    <ion-button  routerlink="/favorite" style="width: 69px;" size="large" fill="outline" color="danger">
+      <ion-icon routerlink="/favorite" name="heart"></ion-icon>
+    </ion-button>
+  </ion-col>
+  <ion-col routerLink="/confirm" style="text-align: center;">
+    <ion-button style=" width: 203px; height: 53px;" size="large" color="danger">Comprar</ion-button>
+  </ion-col>
+</ion-row>

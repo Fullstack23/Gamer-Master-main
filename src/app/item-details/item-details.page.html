@@ -1,0 +1,210 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!--<ion-header>
+<ion-toolbar>
+<ion-buttons slot="start">
+  <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+    <img src="../../assets/back-dark.svg" />
+  </ion-button>
+</ion-buttons>
+
+<ion-buttons slot="end">
+  <ion-button>
+    <ion-icon name="search-outline" color="dark"></ion-icon>
+  </ion-button>
+  <ion-button class="notification">
+    <ion-icon name="notifications-outline" color="dark"></ion-icon>
+    <span>&nbsp;</span>
+  </ion-button>
+</ion-buttons>
+</ion-toolbar>
+</ion-header>-->
+
+<ion-content>
+  <ion-slides color="tertiary" pager="true" class="product-slider">
+    <ion-slide>
+      <img src="../../assets/produto-slider/prod-1.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/produto-slider/prod-2.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/produto-slider/prod-3.png" />
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/produto-slider/prod-4.png" />
+    </ion-slide>
+  </ion-slides>
+
+  <div class="seperator">
+    <hr>
+  </div>
+  <div class="ion-padding-vertical">
+    <h1 class="item-name">SSD Viper</h1>
+
+    <h4 class="price">
+      R$599.90
+    </h4>
+  </div>
+
+  <div class="ion-padding-vertical">
+    <h1 class="item-name">Computador</h1>
+
+    <h4 class="price">
+      R$4.779,00
+    </h4>
+  </div>
+
+  <div class="ion-padding-vertical">
+    <h1 class="item-name">Processador</h1>
+
+    <h4 class="price">
+      R$2.299,90
+    </h4>
+  </div>
+
+  <div class="ion-padding-vertical">
+    <h1 class="item-name">Jogo</h1>
+
+    <h4 class="price">
+      R$79,90
+    </h4>
+  </div>
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div color="light" class="review">
+    <ion-row>
+
+      <ion-col size="6">
+        <div class="rating">
+          4.5
+        </div>
+        Muito bom
+      </ion-col>
+      <ion-col size="6">
+        <div color='dark' class="count">59 Reviews</div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="descricao">
+    <h5>Descrição do SSD</h5>
+    <p class="center">
+      PATRIOT Viper Gaming VPR100 RGB M.2 2280 PCIe Solid State Drive - 512GB Descrição: Transforme sua velocidade da
+      luz!
+      Patriot Viper Gaming está encantado para apresentar a primeira sincronização de APP RGB do mundo, de alto
+      desempenho SSD M.2 PCIe Gen3x4, VPR100.
+    </p>
+  </div>
+
+  <div class="descricao">
+    <h5>Descrição do Computador</h5>
+    <p class="center">
+      Compacto, sem perder performance e expansível, para se adaptar as futuras demandas do seu negócio.
+      A marca Vostro foi desenvolvida para atender aos pequenos e médios empresários com produtos que possuem características ideais para quem precisa estar sempre em evolução.
+      O Small Desktop é equipado com tecnologia wireless 802.11, que permite você conectar seu desktop em qualquer ambiente que tenha um roteador.
+      Conta com diversos slots de expansibilidade para aprimorar a sua máquina conforme o seu negócio cresce.
+    </p>
+  </div>
+
+  <div class="descricao">
+    <h5>Descrição do Processador</h5>
+    <p class="center">
+      Processador AMD Ryzen 5 5600G, 3.9GHz (4.4GHz Max Turbo), AM4, Vídeo Integrado, 6 Núcleos - 100-100000252BOX
+    </p>
+  </div>
+
+  <div class="descricao">
+    <h5>Descrição do Jogo</h5>
+    <p class="center">
+      Cyberpunk 2077 É uma história de ação e aventura de mundo aberto ambientada em Night City, uma megalópole obcecada por poder, glamour e biomodificações.
+      Você joga como V, um mercenário fora da lei atrás de um implante único que carrega a chave da imortalidade.
+      Você pode personalizar aparatos cibernéticos, conjunto de habilidades e estilo de jogo do personagem e explorar uma vasta cidade onde as decisões tomadas definem a história e o mundo ao seu redor.
+    </p>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+  <div class="variation">
+    <ion-segment (ionChange)="segmentChanged($event)" value="produto">
+      <ion-segment-button value="produtos">
+        <ion-label>Selecione seu produto</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+  </div>
+
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="variation-selector">
+    <div class="sizes" [class.active-variation]="activeVariacao === 'produtos'">
+      <div [class.active]='selectedproduto === 1' (click)="changeProduto(1)">
+       SSD
+      </div>
+      <div [class.active]='selectedproduto === 2' (click)="changeProduto(2)">
+       PC
+      </div>
+      <div [class.active]='selectedproduto === 3' (click)="changeProduto(3)">
+       Ryzen
+      </div>
+      <div [class.active]='selectedproduto === 4' (click)="changeProduto(4)">
+       Game
+      </div>
+    </div>
+
+    <!--<div class="colors" [class.active-variation]="activeVariacao === 'periferico'">
+  <div [class.active]='selectedperiferico === 1' (click)="changePeriferico(1)">
+    RYZEN 3
+  </div>
+  <div [class.active]='selectedperiferico === 2' (click)="changePeriferico(2)">
+    RYZEN 5
+  </div>
+  <div [class.active]='selectedperiferico === 3' (click)="changePeriferico(3)">
+    RYZEN 7
+  </div>
+</div>-->
+  </div>
+
+  <div class="colors" [class.active-variacao]="activeVariacao === 'periferico'"></div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col size="">
+    </ion-col>
+    <ion-toolbar>
+      <ion-button expand="block" class="main-button" routerLink="/my-cart" routerDirection="forward">Adicionar ao
+        carirrinho</ion-button>
+    </ion-toolbar>
+  </ion-row>
+</ion-footer>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col routerLink="/favorite">
+        <ion-button routerlink="/favorite" style="width: 69px;" size="large" fill="outline" color="danger">
+          <ion-icon routerlink="/favorite" name="heart"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col routerLink="/checkout" style="text-align: center;">
+        <ion-button style=" width: 203px; height: 53px;" size="large" color="danger">Comprar</ion-button>
+      </ion-col>
+    </ion-row>

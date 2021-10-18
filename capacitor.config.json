@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Gamer-Master",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

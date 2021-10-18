@@ -1,0 +1,93 @@
+<ion-header class="ion-no-border" >
+    <ion-toolbar >
+      <ion-buttons>
+        <ion-menu-button color="tertiary">
+        </ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="tituto ion-padding">
+    <h2 color="tertiary">Categorias</h2>
+  </div>
+
+  <div class="categoria-slider ion-padding-start" >
+    <div class="separetor"></div>
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let categoria of categorias">
+
+        <ion-col>
+          <h4>{{ categoria.nome }}</h4>
+          <img [src]="categoria.imagem" />
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+  <div class="title ion-padding">
+    <h2 color="tertiary">Preço</h2>
+  </div>
+  <div color="tertiary" class="produto-slider ion-padding-end">
+    <ion-slides  [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide  *ngFor="let produto of precodeProdutos">
+
+        <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
+          <img src="{{produto.imagem}}" />
+          <p>${{ produto.preco }}</p>
+          <h6>{{ produto.nome }}</h6>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!--<div color="secondary">
+    <h2>Melhor Venda</h2>
+  </div>
+
+  <div color="tertiary" class="produto-slider ion-padding-end">
+    <ion-slides [options]="{slidesPerView: 'auto', zoom: false, grabCursor: true}">
+      <ion-slide *ngFor="let produto of melhorvendadeProdutos">
+        <ion-col class="ion-text-left"  routerLink="/item-details" routerDirection="forward">
+          <img [src]="produto.imagem" />
+          <p>${{ produto.preco }}</p>
+          <h6>{{ produto.nome}}</h6>
+
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>-->
+  <ion-tabs color="primary">
+
+    <ion-fab color="tertiary" vertical="bottom" horizontal="center" translucent="false">
+      <ion-fab-button >
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+
+    <ion-tab-bar color="primary" routerLink="/home" mode="ios" slot="bottom" >
+      <ion-tab-button tab="home">
+        <ion-icon name="bag-outline"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button  color="tertiary" routerLink="/favorite" tab="favorites" class="comments">
+        <ion-icon name="heart-outline">
+        </ion-icon>
+      </ion-tab-button>
+
+      <div color="tertiary" class="division"></div>
+
+      <ion-tab-button  color="secondary" routerLink="/my-cart"  class="notifs" >
+        <ion-icon name="cart-outline">
+        </ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button  color="tertiary" routerLink="/profile" >
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
+</ion-content>

@@ -1,0 +1,194 @@
+ion-menu-button {
+  margin-left: 10px;
+}
+
+.filter {
+  margin-right: 20px;
+}
+
+.procura {
+  margin-bottom: 20px;
+
+  ion-item {
+      border-radius: 10px;
+      box-shadow: 0px 13px 30px 0px rgba(0, 0, 0, 0.09);
+      padding: 8px;
+
+      ion-icon {
+          margin-right: 16px;
+          border: 1px solid rgb(58, 33, 128);
+      }
+
+      ion-input {
+          padding-left: 10px !important;
+          border-left: 1px solid #2A4072;
+      }
+  }
+
+}
+
+.titulo {
+
+  justify-content: space-between;
+  align-items: center;
+  color: #2A4072;
+  padding-bottom: 32px;
+
+  h2 {
+      margin: auto;
+      //margin: 0 0 0 16px;
+      color: #2A4072;
+      align-items: center;
+  }
+
+  p {
+      margin: 0 16px 0 0;
+      color: #656565;
+  }
+}
+
+.categoria-slider {
+  ion-slide {
+      width: 150px;
+      height: 100px;
+      margin-right: 10px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+
+      ion-col {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h2 {
+            margin: auto;
+              color: #2A4072;
+
+          }
+          img {
+              position: absolute;
+              width:70%;
+              height: 50%;
+              object-fit: cover;
+              //border-radius: -50px;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              box-shadow: 0px 15px 20px 0px rgba(255, 255, 255, 0.16);
+          }
+          ion-tabs{
+            color: #2A4072;
+          }
+      }
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.produto-slider {
+  margin-bottom: 0px;
+
+  ion-slide {
+      width: 150px;
+      height: auto;
+      margin-left: 20px;
+      margin-right: 10px;
+
+      ion-col {
+          img {
+              width: 100%;
+              height: 150px;
+              object-fit: cover;
+              border-radius: 8px;
+          }
+
+          p {
+              margin-top: 0px;
+              margin-bottom: 0;
+          }
+
+          h6 {
+              margin-top: 5px;
+              margin-bottom: 0;
+              color: #2A4072;
+          }
+      }
+  }
+}
+
+// Removing highlight when focused/clicked on product
+ion-slide:focus {
+  outline: none !important;
+}
+
+ion-col:focus {
+  outline: none !important;
+}
+
+ion-tabs{
+  ion-fab{
+
+   ion-fab-button{
+     /* display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left: auto;
+     margin-right: auto;	 */
+     margin-bottom: 10px;
+
+    }
+  }
+
+  ion-tab-bar{
+   --border: 0;
+
+
+   position: absolute;
+   bottom: 0;
+   left:0; right: 0;
+
+   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+   &:after{
+     content: " ";
+     width: 100%;
+     bottom: 0;
+
+     background: var(--ion-color-primary);
+     height: env(safe-area-inset-bottom);
+     position: absolute;
+   }
+
+   ion-tab-button {
+     --background: var(--ion-color-tertiary );
+   }
+   ion-tab-button.comments {
+     margin-right: 0px;
+     border-top-right-radius: 3px;
+     //--background: var(--ion-color-tertiary);
+   }
+   ion-tab-button.notifs {
+     margin-left: 0px;
+     border-top-left-radius: 3px;
+     //--background: var(--ion-color-tertiary);
+   }
+
+   .division {
+     width: 70px;
+     height: 70px;
+     margin-bottom: 50px;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: rgb(255, 255, 255);
+     border-radius: 100%;
+
+
+     //fill: #2A4072
+
+   }
+  }
+
+
+}
